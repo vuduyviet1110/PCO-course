@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+:root{
+    --menu-height: 50px;
+    --content-width: 1200px;
+    --mt-height: var(--menu-height);
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth;
+    background-color:rgba(7, 42, 84, 0.678);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.6;
+}
+
+/* Common CSS below */
+.mt-height{
+    margin-top: 150px;
+}
+
+.ml20{
+    margin-left: 20px;
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.f-right {
+    float: right;
+}
+
+/* Main CSS below */
+
+
+.wrapper{
+    max-width: 1200px;
+    margin: auto auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+}
+.video{
+    position: absolute;
+    width:max-content;
+    height: max-content;
+}
+.vid{
+    width: 1516px;
+    margin-left: -158px;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width:0;
+    }
+    70%,90%{
+        width:100%;
+    }
+}
+
+.container{
+    position: absolute;
+    
+}
+.header{
+    width: 100%;
+    height: var(--menu-height);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding-left: 140px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+}
+.items:hover{
+    color:rgba(198, 198, 198, 0.877);
+    transition:0.5s;
+    box-shadow: 2 2 1.5rem 2 rgb(0 0 0 / 5%);
+    transform: translateZ(9);
+    z-index: 1;
+    letter-spacing: 3px;
+}
+
+.menu-items {
+    height: var(--menu-height);
+    border: none;
+    overflow: hidden;
+}
+
+
+.menu-items:hover {
+    cursor: pointer;
+    background-color: white;
+    transition: .15s;
+}
+
+.menu-items:hover > a{
+    color: black;
+    transition: 0.3s;
+}
+
+.menu-items > a {
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    padding: 16px 12px;
+}
+
+.content-wrapper {
+    margin-top: calc(var(--menu-height) + 30px);
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--content-width);
+}
+
+
+.contact-section,.overview-section,
+.learning-resources-section, .assessment-section,
+.schudule-section {
+    padding-top: 16px;
+}
+
+.heading {
+    padding-bottom: 16px;
+}
+.subheading{
+    padding: 16px 0;
+}
+
+.btn {
+    padding: 16px 64px;
+    margin: 6px 16px;
+    float: right;
+    background-color:black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s;
+
+}
+
+.btn:hover{
+    border: none;
+    background-color: white;
+    color:rgba(250, 235, 215, 0.764);
+    border: 1px solid black;
+    transition: .25s;
+}
+
+.contact-content p{
+    margin-bottom: 8px;
+}
+
+.contact-content textarea{
+    margin-top: 8px;
+}
+
+.text-input {
+    padding: 16px;
+    resize: none;
+    border: 1px solid black;
+    font-size: 25px;
+    max-width: 1140px;
+    border-radius: 5px;
+}
+
+.text-input:focus-visible{
+    border: 1px solid black;
+}

@@ -1,0 +1,129 @@
+
+:root{
+    --cell-width: 200px;
+    --cell-width-x2: calc(var(--cell-width)*2);
+    --cell-width-x3: calc(var(--cell-width)*3);
+    --cell-height: 60px;
+    --cell-special-height: 90px;
+    --cell-height-x2: calc(var(--cell-height)*2);
+    --cell-height-x3: calc(var(--cell-height)*3);
+
+}
+
+
+/* Common below */
+.bold {
+    font-weight: bold;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.row.special-height {
+    max-height: var(--cell-special-height);
+    height: var(--cell-special-height);
+}
+
+/* Main css below*/
+
+
+.table {
+    display: block;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    max-height: var(--cell-height);
+    height: var(--cell-height);
+}
+
+.row-head {
+    border-top: 1px solid #000;
+    max-height: var(--cell-height);
+    height: var(--cell-height);
+}
+
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-width);
+    outline: 1px solid black;
+    height: 100%;
+}
+
+
+.cell-x2 {
+    display: flex;
+    align-items: center;
+    width: var(--cell-width-x2);
+    outline: 1px solid black;
+    height: 100%;
+    overflow: hidden;
+}
+.cell-x3 {
+    display: flex;
+    align-items: center;
+    width: var(--cell-width-x3);
+    outline: 1px solid black;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cell-x2>p,
+.cell-x3>p{
+    padding: 8px 20px;
+}
+
+
+
+.special-row {
+    display: flex;
+    align-items: center;
+}
+
+.cell-height-x2{
+    height: var(--cell-height-x2) !important;
+
+}
+
+
+.special-row > .cell,
+.special-row > .special-cell {
+    height: 100%;
+}
+
+
+
+/* Table additon properties */
+
+/* b-none: remove border/outline */
+.table.b-none .cell,
+.table.b-none .cell-x2,
+.table.b-none .cell-x3{
+    outline: 1px solid transparent;
+}
+
+/* jc-none: justify-content: unset */
+.table.jc-none .cell,
+.table.jc-none .cell-x2,
+.table.jc-none .cell-x3{
+    justify-content: unset;
+}
+
+/* half-cell-height: set height of row, cell = 1/2 the default height */
+.table.half-cell-height .row,
+.table.half-cell-height .cell,
+.table.half-cell-height .cell-x2,
+.table.half-cell-height .cell-x3 {
+    height: calc(var(--cell-height) / 2);
+}
+
+/* none-margin-left-cell: remove margin left in p element of .cell */
+.table.none-margin-left-cell .cell-x2>p,
+.table.none-margin-left-cell .cell-x3>p {
+    margin-left: 0;
+    padding-left: 0 ;
+}
